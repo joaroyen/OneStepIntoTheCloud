@@ -1,0 +1,31 @@
+﻿<Window x:Class="JoarOyen.OneStepIntotheCloud.SmartClient.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Title="One step into the Cloud" Height="476" Width="661" DataContext="{Binding}" Loaded="WindowLoaded">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="352*" />
+			<RowDefinition Height="47" />
+            <RowDefinition Height="38" />
+        </Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="188" />
+			<ColumnDefinition Width="315*" />
+		</Grid.ColumnDefinitions>
+		<DataGrid AutoGenerateColumns="False" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="12,12,12,10" Name="dataGridMovies" VerticalAlignment="Stretch" ItemsSource="{Binding}">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Title" Binding="{Binding Path=Title}" />
+				<DataGridTextColumn Header="Year" Binding="{Binding Path=Year}" />
+			</DataGrid.Columns>
+		</DataGrid>
+		<Button Content="Retrieve Movies" Grid.Row="1" Height="34" HorizontalAlignment="Left" Margin="12,0,0,0" Name="buttonRetrieveMovies" VerticalAlignment="Top" Width="158" Click="ButtonRetrieveMoviesClick" FontSize="20" />
+		<Label Content="Duration" Grid.Column="1" Height="38" HorizontalAlignment="Left" Margin="0,351,0,0" Name="labelDuration" VerticalAlignment="Top" FontSize="20" Grid.RowSpan="2" />
+        <Label Content="Url" Grid.Row="1" Height="33" HorizontalAlignment="Left" Margin="12,40,0,0" Name="labelUrl" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="615" FontSize="16" />
+    </Grid>
+	<Window.Background>
+		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FFE2E2E2" Offset="0" />
+			<GradientStop Color="#FFA7A2A2" Offset="1" />
+		</LinearGradientBrush>
+	</Window.Background>
+</Window>

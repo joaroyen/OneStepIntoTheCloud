@@ -1,0 +1,24 @@
+﻿@model IEnumerable<JoarOyen.OneStepIntoTheCloud.Core.Model.Movie>
+@{
+    ViewBag.Title = "1001 movies";
+}
+
+<h2>This is a list of very good movies</h2>
+<p>
+    @Html.ActionLink("Suggest another movie", "Suggestion", "Movie")
+</p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Year</th>
+    </tr>
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <td>@movie.Id</td>
+            <td>@movie.Title</td>
+            <td>@movie.Year</td>
+        </tr>        
+    }
+</table>

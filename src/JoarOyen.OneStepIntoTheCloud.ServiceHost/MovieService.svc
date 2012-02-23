@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="JoarOyen.OneStepIntoTheCloud.ServiceHost.MovieService" CodeBehind="MovieService.svc.cs" %>

@@ -1,0 +1,4 @@
+*.cs diff=csharp
+*.docx diff=word
+*.dll binary
+*.snk binary
